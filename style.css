@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section:20px;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--main-text-color);
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right:0;
+}
+
+.main-nav{
+    justify-content: space-between;
+    padding: 8px 0px;
+}
+
+.nav-logo img{
+    width: 200px;
+}
+
+.nav-contents ul{
+    gap: 16px;
+}
+
+.hover-link
+{
+    cursor:pointer;
+}
+
+.hover-link:hover{
+    color: blue;
+}
+
+.hover-link:active
+{
+    color:red;
+}
+
+.search-bar{
+    height: 32px;
+    gap:12px;
+}
+
+.search-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 5px;
+    border: 2px solid #bbd0e2;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-btn{
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    border-radius: 5px;
+    border:none;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-btn:hover{
+    background-color:var(--accent-color-dark)
+}
+
+
