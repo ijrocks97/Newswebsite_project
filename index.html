@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News-Latest news,Breaking news</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- <script
+      src="https://kit.fontawesome.com/77843babf5.js"
+      crossorigin="anonymous"
+    ></script> -->
   </head>
   <body>
+    <!-- navbar  -->
+
     <nav>
       <div class="main-nav container flex">
         <a href="#" class="nav-logo">
@@ -15,19 +21,72 @@
 
         <div class="nav-contents">
           <ul class="flex">
-            <li class="nav-item hover-link">Sports</li>
-            <li class="nav-item hover-link">Politics</li>
-            <li class="nav-item hover-link">Entertainment</li>
+            <li
+              class="nav-item hover-link"
+              id="Sports"
+              onclick="onNavclick('Sports')"
+            >
+              Sports
+            </li>
+            <li
+              class="nav-item hover-link"
+              id="Politics"
+              onclick="onNavclick('Politics')"
+            >
+              Politics
+            </li>
+            <li
+              class="nav-item hover-link"
+              id="Entertainment"
+              onclick="onNavclick('Entertainment')"
+            >
+              Entertainment
+            </li>
           </ul>
         </div>
 
         <div class="search-bar flex">
-          <input type="text" class="search-input" placeholder="e.g. Football" />
-          <button class="search-btn">Search</button>
+          <input
+            type="text"
+            id="input-text"
+            class="search-input"
+            placeholder="e.g. Football"
+          />
+          <button id="search-btn" class="search-btn" onclick="">Search</button>
+          <!-- <i class="fa-solid fa-moon" id="theme-btn"></i> -->
         </div>
       </div>
     </nav>
-    <main-content></main-content>
+
+    <!-- main content area where all the fetched news are displayed as cards -->
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <!-- templates to add news as cards -->
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="use-img"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is a title</h3>
+          <h6 class="news-source">End gadget 29/09/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex velit
+            reiciendis praesentium itaque molestias neque rerum quos voluptatem
+            amet culpa.
+          </p>
+        </div>
+      </div>
+    </template>
+
     <script src="script.js"></script>
   </body>
 </html>
